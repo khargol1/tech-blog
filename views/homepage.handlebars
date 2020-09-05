@@ -3,15 +3,14 @@
   <li>
     <article class="post">
       <div class="title">
-        <h2>{{post.title}}</h2>
+        <h2><a href="/post/{{post.id}}">{{post.title}}</a></h2>
         <span>{{post.post_content}}</span>
-        
       </div>
       <div class="meta">
         {{post.vote_count}} point(s) by {{post.user.username}} on
         {{post.created_at}}
         |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
+        <h5>{{post.comments.length}} comment(s)</h5>
       </div>
     </article>
   </li>
