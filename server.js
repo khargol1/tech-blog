@@ -13,6 +13,8 @@ const hbs = exphbs.create({ helpers });
 //require('dotenv').config();
 
 
+// As much as I would love to have the cookie secret hidden, the app will not run on heroku and says internal server error. 
+
 const sess = {
   secret: 'tiny mighty tanks battery',
   cookie: { maxAge: 1000*60*60 },
