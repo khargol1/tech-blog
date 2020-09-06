@@ -14,7 +14,7 @@ require('dotenv').config();
 
 const sess = {
   secret: process.env.DB_SECRET,
-  cookie: { maxAge: 1000*60*30 },
+  cookie: { maxAge: 1000*60*60 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -28,7 +28,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // turn on routes
