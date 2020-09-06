@@ -12,8 +12,10 @@ const hbs = exphbs.create({ helpers });
 
 require('dotenv').config();
 
+let verySecret = process.env.DB_SECRET;
+
 const sess = {
-  secret: process.env.DB_SECRET,
+  secret: verySecret,
   cookie: { maxAge: 1000*60*60 },
   resave: false,
   saveUninitialized: true,
