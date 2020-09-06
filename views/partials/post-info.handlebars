@@ -2,7 +2,9 @@
       <div class="title">
         <h2><a href="/post/{{id}}">{{title}}</a></h2>
         <p>by {{user.username}} {{format_date created_at}}</p>
-        <span>{{post_content}}</span>
+        <div class="content-wrapper">
+        <span class="post-content">{{post_content}}</span>
+        </div>
       </div>
       <div class="meta">
         UpVotes:{{vote_count}}        
