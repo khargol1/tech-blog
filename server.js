@@ -10,10 +10,12 @@ const PORT = process.env.PORT || 3001;
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({ helpers });
 
-require('dotenv').config();
+//require('dotenv').config();
+
+let verySecret = process.env.DB_SECRET;
 
 const sess = {
-  secret: 'tiny mighty tanks',
+  secret: verySecret,
   cookie: { maxAge: 1000*60*60 },
   resave: false,
   saveUninitialized: true,
